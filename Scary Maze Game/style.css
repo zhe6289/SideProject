@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.game .level-two {
+  display: none;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  min-height: 20vh;
+}
+
+.description .ui-level {
+  font-size: 4rem;
+}
+
+.description .ui-message {
+  font-size: 2rem;
+}
+
+.description .next-button {
+  padding: 1rem 3rem;
+  background: #456393;
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.spooky-picture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
