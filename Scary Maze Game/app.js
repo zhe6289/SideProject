@@ -11,15 +11,12 @@ const spookyPicture = document.querySelector('.spooky-picture')
 const screamSound = document.querySelector('.scream')
 
 const collisionCheck = (value) => {
-    console.warn(value)
     if (value === 'maze-border') {
         alert ('失敗，請重來')
         window.removeEventListener('mousemove', mouseMoveEvent)
         Popup.style.opacity = 1
         Popup.style.pointerEvents = 'all'
-        startGame.forEach(item => {
-            item.style.stroke = 'rgb(251, 138, 138)'
-        })        
+        startGame.forEach(item => item.style.stroke = 'rgb(251, 138, 138)')        
     }
     if (value === 'finish') {
         levelOne.style.pointerEvents = 'none'
@@ -41,9 +38,7 @@ startGame.forEach(item => {
 })
 
 const mouseMoveEvent = (e) => {
-    startGame.forEach(item => {
-        item.style.stroke = 'rgb(17, 241, 22)'
-    })
+    startGame.forEach(item => item.style.stroke = 'rgb(17, 241, 22)')
     Popup.style.opacity = 0
     Popup.style.pointerEvents = 'none'
     let check = e.target.classList.value
@@ -57,7 +52,5 @@ const nextLevel = () => {
     uiMessage.textContent = '還有一關'
     Popup.style.opacity = 1
     Popup.style.pointerEvents = 'all'
-    startGame.forEach(item => {
-        item.style.stroke = 'rgb(251, 138, 138)'
-    })    
+    startGame.forEach(item => item.style.stroke = 'rgb(251, 138, 138)')    
 }
