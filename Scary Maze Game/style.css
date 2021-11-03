@@ -14,6 +14,11 @@
   display: none;
 }
 
+.game .start-game {
+  stroke: rgb(251, 138, 138);
+  stroke-width: 3;
+}
+
 .description {
   display: flex;
   justify-content: center;
@@ -30,7 +35,7 @@
   font-size: 2rem;
 }
 
-.description .next-button {
+.next-button {
   padding: 1rem 3rem;
   background: #456393;
   color: aliceblue;
@@ -49,4 +54,25 @@
   height: 100%;
   object-fit: cover;
   display: none;
+}
+
+/* 跳窗 */
+.tryagain-popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  color: white;
+  border: 1px solid #456393;
+  background: #9cabc4;
+  width: 30vw;
+  height: 30vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
 }
